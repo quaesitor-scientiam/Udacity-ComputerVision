@@ -81,7 +81,7 @@ class DecoderRNN(nn.Module):
             outputs = self.fc_out(hiddens.squeeze(1))
             _, predicted = outputs.max(1)
             sampled_ids.append(predicted)
-            features = self.word_embeddings(predicted)
+            features = self.word_embeddings(predicted).unsqueeze(1)
             hx = (hiddens, states)
 
         ids = torch.stack(sampled_ids, 1)
