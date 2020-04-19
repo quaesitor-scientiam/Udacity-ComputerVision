@@ -108,7 +108,7 @@ class robot:
         return measurements
 
     def rand2(self):
-        return random.uniform(-1.0,1.0) * self.measurement_noise
+        return random.uniform(-1.0, 1.0) * self.measurement_noise
 
     # --------
     # make_landmarks:
