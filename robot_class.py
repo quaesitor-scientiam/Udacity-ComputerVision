@@ -91,10 +91,10 @@ class robot:
             # print("lm: {}".format(lm))
             noise = self.rand2()
             # print("Noise: {}".format(noise))
-            dx = self.x - lm[0] + noise
+            dx = lm[0] - self.x + noise
             noise = self.rand2()
             # print("Noise: {}".format(noise))
-            dy = self.y - lm[1] + noise
+            dy = lm[1] - self.y + noise
             # print(i, dx,dy)
             if dx < 0: dx = dx * -1
             if dy < 0: dy = dy * -1
